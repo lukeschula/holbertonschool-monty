@@ -31,6 +31,14 @@ void push( char *special_token, unsigned int num)
 			free_all();
 			exit(EXIT_FAILURE);
 		}
+		
+		i = atoi(special_token);
+		add_dnodeint(buf.stacks, i)
 
+		return;
+	}
+	else 
+		return;
+}
 
 
