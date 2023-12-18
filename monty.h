@@ -38,3 +38,4 @@ typedef struct instruction_s
 } instruction_t;
 
 int main( int argc, char *argv[]);
+int digit_rdr(char *special_token);
