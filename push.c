@@ -7,7 +7,7 @@
  */
 void push( char *special_token, unsigned int num)
 {
-	int n;
+	int i;
 	
 	if (strcmp(special_token, "push") == 0)
 	{
@@ -19,4 +19,9 @@ void push( char *special_token, unsigned int num)
 			
 			free_all();
 			exit(EXIT_FAILURE);
-		}	
+		}
+	}
+	
+	i = digit_rdr(special_token)
+
+	if (i == 0) 	
