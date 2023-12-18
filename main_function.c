@@ -34,4 +34,7 @@ int main( int argc, char *argv[])
 		buf.input = input;
 		special_token = strtok(buf.line, " \t\n");
 
-
+		if (special_token == NULL)
+			continue; 
+		
+		else if (special_token[0] == '#'
