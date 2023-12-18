@@ -28,3 +28,10 @@ int main( int argc, char *argv[])
 	counter = linecount(buf.fd);
 	buf.fd = fopen(argv[1] "r");
 
+	for (x = 1; x < counter + 1; x++)
+	{
+		getline(&input, &length, buf.fd);
+		buf.input = input;
+		special_token = strtok(buf.line, " \t\n");
+
+
