@@ -37,4 +37,12 @@ int main( int argc, char *argv[])
 		if (special_token == NULL)
 			continue; 
 		
-		else if (special_token[0] == '#'
+		else if (special_token[0] == '#')
+			continue;
+
+		else if (strcmp(special_token, "push") == 0)
+			push(special_token, x)
+		else
+			others(special_token, x);
+	}
+
