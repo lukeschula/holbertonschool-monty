@@ -45,4 +45,8 @@ int main( int argc, char *argv[])
 		else
 			others(special_token, x);
 	}
-
+	free(input);
+	free_dlistint(*buf.stacks);
+	fclose(buf.fd);
+	return (0)
+}
