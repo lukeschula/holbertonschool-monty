@@ -19,4 +19,10 @@ int main( int argc, char *argv[])
 
 	if (argc != 2)
 		err_msg("USAGE ERROR: monty ", "file", EXIT_FAILURE);
+	
+	buf.fd = fopen(arg[1], "r");
 
+	if (buf.fd == NULL)
+		err_msg("Error: File cannot open ", argv[1], EXIT_FAILURE);
+
+	
