@@ -25,4 +25,6 @@ int main( int argc, char *argv[])
 	if (buf.fd == NULL)
 		err_msg("Error: File cannot open ", argv[1], EXIT_FAILURE);
 
-	
+	counter = linecount(buf.fd);
+	buf.fd = fopen(argv[1] "r");
+
