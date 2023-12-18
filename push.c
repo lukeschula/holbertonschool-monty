@@ -20,8 +20,17 @@ void push( char *special_token, unsigned int num)
 			free_all();
 			exit(EXIT_FAILURE);
 		}
-	}
 	
-	i = digit_rdr(special_token)
+	
+		i = digit_rdr(special_token)
 
-	if (i == 0) 	
+		if (i == 0)
+		{
+			dprintf(STDERR_FILENO, "L%u: usage: push integer\n", num);
+		
+			free_all();
+			exit(EXIT_FAILURE);
+		}
+
+
+
