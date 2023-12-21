@@ -47,3 +47,9 @@ int is_dig(char str_num[]);
 void (*sep_func(char *arg))(stack_t **stack, unsigned int line_num);
 void sep_arg(char *file);
 int main(int argc, char **argv);
+void _swap(stack_t **stack, unsigned int line_num);
+void _push(stack_t **stack, unsigned int line_num);
+void _pop(stack_t **stack, unsigned int line_num);
+void _pint(stack_t **stack, unsigned int line_num);
+void _pall(stack_t **stack, unsigned int line_num);
+
