@@ -43,4 +43,7 @@ typedef struct instruction_s
         void (*f)(stack_t **stack, unsigned int line_number);
 } instruction_t;
 
-
+int is_dig(char str_num[]);
+void (*sep_func(char *arg))(stack_t **stack, unsigned int line_num);
+void sep_arg(char *file);
+int main(int argc, char **argv);
