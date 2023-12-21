@@ -17,3 +17,34 @@ int is_dig(char str_num[])
 	}
 	return (1);
 }
+/**
+ *
+ */
+void (*sep_func(char *arg))(stack_t **stack, unsigned int line_num)
+{
+	int it = 0;
+
+	instruction_t arr[] = {
+		{"push", _push},
+		{"pall", _pall},
+		{"pint", _pint},
+		{"pop", _pop},
+		{"swap", _swap},
+		{"add", _add},
+		{"nop", _nop},
+		{NULL, NULL},
+	};
+
+	while (arr[it].f != NULL)
+	{
+		if (strcmp(arr[it].opcode, arg) == 0)
+		{
+			return (arr[it].f);
+		}
+		it++;
+	}
+}
+/**
+ *
+ */
+
