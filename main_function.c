@@ -1,52 +1,19 @@
 #include "monty.h"
-
-/*
- *
- *
- *
+/**
  *
  */
-int main( int argc, char *argv[])
+int is_dig(char str_num[])
 {
-	stack_t *stacks;
-	char *input;
-	char *special_token;
-	unsigned int counter;
-	unsigned int x;
-	size_t length;
+	int it;
 
-	buf.stacks = stacks;
-
-	if (argc != 2)
-		err_msg("USAGE ERROR: monty ", "file", EXIT_FAILURE);
-	
-	buf.fd = fopen(arg[1], "r");
-
-	if (buf.fd == NULL)
-		err_msg("Error: File cannot open ", argv[1], EXIT_FAILURE);
-
-	counter = linecount(buf.fd);
-	buf.fd = fopen(argv[1] "r");
-
-	for (x = 1; x < counter + 1; x++)
+	if (str_num[0] == '-')
+		str_num[0] = '0';
+	for (it = 0; str_num[it]; it++)
 	{
-		getline(&input, &length, buf.fd);
-		buf.input = input;
-		special_token = strtok(buf.line, " \t\n");
-
-		if (special_token == NULL)
-			continue; 
-		
-		else if (special_token[0] == '#')
-			continue;
-
-		else if (strcmp(special_token, "push") == 0)
-			push(special_token, x)
-		else
-			others(special_token, x);
+		if (isdigit(str_num[it]) == 0)
+		{
+			return (0);
+		}
 	}
-	free(input);
-	free_dlistint(*buf.stacks);
-	fclose(buf.fd);
-	return (0)
+	return (1);
 }
