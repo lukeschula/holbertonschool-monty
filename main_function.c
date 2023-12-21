@@ -91,4 +91,16 @@ void sep_arg(char *file)
 /**
  *
  */
-int 
+int main(int argc, char **argv)
+{
+	if (argc == 2)
+	{
+       		arg_get(argv[1]);
+	}
+	else
+	{
+		fprintf(stderr, "USAGE: monty file\n");
+		exit(EXIT_FAILURE);
+	}
+	return (0);
+}	
