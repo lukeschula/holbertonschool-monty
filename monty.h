@@ -11,7 +11,7 @@
 #include <stddef.h>
 #include <ctype.h>
 
-
+char *nodeValue;
 
 /**
  * struct stack_s - doubly linked list representation of a stack (or queue)
@@ -52,4 +52,8 @@ void _push(stack_t **stack, unsigned int line_num);
 void _pop(stack_t **stack, unsigned int line_num);
 void _pint(stack_t **stack, unsigned int line_num);
 void _pall(stack_t **stack, unsigned int line_num);
-
+void free_list(stack_t *head);
+void malloc_error(void);
+void open_error(char *file);
+void func_error(unsigned int l_n, stack_t *h, char *input, char *opc, FILE *fd);
+void push_error(unsigned int line_num, stack_t *head, char *input, FILE fd);
