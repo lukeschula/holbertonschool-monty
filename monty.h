@@ -1,10 +1,16 @@
 #ifndef MONTY_H
 #define MONTY_H
 
+#define DELIM " \t\n\a\r"
+
 #include <stdio.h>
 #include <unistd.h>
 #include <stdlib.h>
 #include <string.h>
+#include <fctnl.h>
+#include <stddef.h>
+#include <ctype.h>
+
 
 
 /**
@@ -37,5 +43,4 @@ typedef struct instruction_s
         void (*f)(stack_t **stack, unsigned int line_number);
 } instruction_t;
 
-int main( int argc, char *argv[]);
-int digit_rdr(char *special_token);
+
