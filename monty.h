@@ -1,7 +1,6 @@
 #ifndef MONTY_H
 #define MONTY_H
 
-#define DELIM " \t\n\a\r"
 
 #include <stdio.h>
 #include <unistd.h>
@@ -10,7 +9,7 @@
 #include <stddef.h>
 #include <ctype.h>
 
-char *nodeGlobal;
+
 
 /**
  * struct stack_s - doubly linked list representation of a stack (or queue)
@@ -42,20 +41,23 @@ typedef struct instruction_s
         void (*f)(stack_t **stack, unsigned int line_number);
 } instruction_t;
 
-int is_dig(char str_num[]);
-void (*sep_func(char *arg))(stack_t **stack, unsigned int line_num);
-void sep_arg(char *file);
-int main(int argc, char **argv);
-void _swap(stack_t **stack, unsigned int line_num);
-void _push(stack_t **stack, unsigned int line_num);
-void _pop(stack_t **stack, unsigned int line_num);
-void _pint(stack_t **stack, unsigned int line_num);
-void _pall(stack_t **stack, unsigned int line_num);
-void free_list(stack_t *head);
-void malloc_error(void);
-void open_error(char *file);
-void func_error(unsigned int l_n, stack_t *h, char *input, char *opc, FILE *fd);
-void push_error(unsigned int line_num, stack_t *head, char *input, FILE fd);
-char **gettoken(stack_t **stack);
+int global_num;
+
+int is_dig(char *token);
+int open_file(char *file, stack_t **stack);
+void free_file(char *buff_line, FILE *contents);
+int main(int argc, char *argv[]);
+int get_func(char *token, unsigned int input, stack_t **stack);
+void free_stack(stack_t **top);
+void pint_stack(stack_t **top, unsigned int line_num);
+void push_func(stack_t **top, unsigned int line_num);
+void pall_func(stack_t **top, unsigned int line_num);
+void pop_func(stack_t **top, unsigned int line_num);
+void swap_func(stack_t **top, unsigned int line_num);
+void _add(stack_t **top, unsigned int line_num);
+void _nop(stack_t **top, unsigned int line_num);
+stack_t *add_dnodeint(stack_t **head, const int n);
+int delete_dnodeint_at_index(stack_t **head, unsigned int index);
+size_t print_dlistint(const stack_t *h);
 
 #endif
