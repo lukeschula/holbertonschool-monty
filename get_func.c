@@ -1,6 +1,10 @@
 #include "monty.h"
 /**
- *
+ * get_func - function that will perform the operation
+ * @token: operation code
+ * @input: line read
+ * @stack: structure
+ * Return: 0 on success and 1 if fails
  */
 int get_func(char *token, unsigned int input, stack_t **stack)
 {

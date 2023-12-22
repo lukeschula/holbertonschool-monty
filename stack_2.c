@@ -1,6 +1,8 @@
 #include "monty.h"
 /**
- *
+ * pop_func - delete the value at top of stack
+ * @top: element at the top of the stack
+ * @line_num: constant int value in the structure
  */
 void pop_func(stack_t **top, unsigned int line_num)
 {
@@ -16,7 +18,9 @@ void pop_func(stack_t **top, unsigned int line_num)
 	*top = temp;
 }
 /**
- *
+ * swap_func - pushes an element to the stack
+ * @top: element at the top of the stack
+ * @line_num: constant int value in the structure
  */
 void swap_func(stack_t **top, unsigned int line_num)
 {
@@ -41,8 +45,9 @@ void swap_func(stack_t **top, unsigned int line_num)
 	}
 }
 /**
- *
- *
+ * _add - dds the top two elements of the stack
+ * @top: element at the top of the stack
+ * @line_num: constant int value in the structure
  */
 void _add(stack_t **top, unsigned int line_num)
 {
@@ -58,7 +63,9 @@ void _add(stack_t **top, unsigned int line_num)
 	pop_func(top, line_num);
 }
 /**
- *
+ * _nop - function that does nop(ing)
+ * @top: element at the top of the stack
+ * @line_num: constant int value in the structure
  */
 void _nop(stack_t **top, unsigned int line_num)
 {

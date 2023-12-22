@@ -1,6 +1,8 @@
 #include "monty.h"
 /**
- *
+ * is_dig - checks if is a number
+ * @token: string to check id is a number
+ * Return: 0
  */
 int is_dig(char *token)
 {
@@ -16,7 +18,10 @@ int is_dig(char *token)
 	return (0);
 }
 /**
- *
+ * open_file - Open a monty files
+ * @file: monty file
+ * @stack: struct
+ * Return: 0
  */
 int open_file(char *file, stack_t **stack)
 {
@@ -61,7 +66,9 @@ int open_file(char *file, stack_t **stack)
 	return (0);
 }
 /**
- *
+ * free_file - free line memory
+ * @buff_line: line
+ * @contents: file
  */
 void free_file(char *buff_line, FILE *contents)
 {

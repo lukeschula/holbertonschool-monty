@@ -1,8 +1,8 @@
 #include "monty.h"
 /**
- *
- *
- *
+ * push_func - pushes an element to the stack
+ * @top: element at the top of the stack
+ * @line_num: constant int value in the structure
  */
 void push_func(stack_t **top, unsigned int line_num)
 {
@@ -27,7 +27,9 @@ void push_func(stack_t **top, unsigned int line_num)
 	*top = add_node;
 }
 /**
- *
+ * pall_func - Prints all values of stack
+ * @top: element at the top of the stack
+ * @line_num: constant int value in the structure
  */
 void pall_func(stack_t **top, unsigned int line_num)
 {
@@ -41,9 +43,11 @@ void pall_func(stack_t **top, unsigned int line_num)
 	}
 }
 /**
- *
+ * pint_func - that print the valueat top of stack
+ * @top: element at the top of the stack
+ * @line_num: constant int value in the structure
  */
-void pint_stack(stack_t **top, unsigned int line_num)
+void pint_func(stack_t **top, unsigned int line_num)
 {
 	stack_t *temp = *top;
 
@@ -56,7 +60,8 @@ void pint_stack(stack_t **top, unsigned int line_num)
 		printf("%d\n", temp->n);
 }
 /**
- *
+ * free_stack - print the valueat top of stack
+ * @top: element at the top of the stack
  */
 void free_stack(stack_t **top)
 {
